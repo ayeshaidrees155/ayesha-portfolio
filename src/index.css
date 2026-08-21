@@ -1,0 +1,86 @@
+@import url('https://api.fontshare.com/v2/css?f[]=satoshi@900,700,500,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+    --font-sans: "Satoshi", sans-serif;
+
+}
+
+html {
+    scroll-behavior: smooth;
+
+}
+
+
+:root {
+    --bg-clr: #a2798f;
+    --bg-white: #FFFFFF;
+    --bg-gray: #F4F4F4;
+    --bg-nav: #B3B3B3;
+
+    --clr-linkDefault: #c2c2c2;
+    --clr-linkScrolled: #656565;
+    --border-fadeWhite: #d1cdd0;
+    --border-fadeGray: #9a9198;
+    --clr-purple: #804464;
+    --clr-white: #FFFFFF;
+    --clr-fadeWhite: #E6E6E6;
+    --clr-black: #000000;
+    --clr-blackSec: #101828;
+    --clr-fadeBlack: #281018;
+    --clr-gray: #826A72;
+    --clr-fadeGray: #654A55;
+
+    --text-sm: 14px;
+    --text-desc: 16px;
+    --text-2xl: 24px;
+    --text-4xl: 48px;
+    --text-h1: 60px;
+    --text-p: 18px;
+    --text-btn: 14px;
+    --text-badge: 12px;
+}
+
+
+.nav-link {
+    position: relative;
+
+    text-decoration: none;
+    font-size: var(--text-sm);
+    transition: color 0.3s ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+
+    background-color: #804464;
+    transition: width 0.2s ease-in-out;
+    border-radius: 2px;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 27ch;
+    }
+
+
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
