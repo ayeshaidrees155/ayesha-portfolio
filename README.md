@@ -6,7 +6,7 @@ A clean, modern, and fully responsive personal portfolio web application built t
 
 ## 🚀 Live Demo
 
-## 🔗 **[View Live Portfolio](https://ayesha-portfolio.vercel.app)**
+## 🔗 **[View Live Portfolio](https://ayeshaidrees-portfolio.vercel.app/)**
 
 ## 🛠️ Tech Stack
 
