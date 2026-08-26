@@ -38,7 +38,7 @@ export default function Contact() {
         if (!formData.lastName.trim()) { newErrors.lastName = "Last Name  is required" }
         if (!formData.email.trim()) { newErrors.email = "Email Address is required" }
         else if (!emailPattern.test(formData.email)) { newErrors.email = "Please enter valid email address" }
-        if (!formData.mobileNo.trim()) { newErrors.mobileNo = "Mobile No is required" }
+        // if (!formData.mobileNo.trim()) { newErrors.mobileNo = "Mobile No is required" }
         if (!formData.message.trim()) { newErrors.message = "Message cannot be empty" }
 
         setErrors(newErrors);
@@ -54,8 +54,8 @@ export default function Contact() {
         if (isValid) {
 
             emailjs.send(
-                'service_lg0i94j',     //  Service ID
-                'template_7a24m5b',    //  Template ID
+                'service_lg0i94j',
+                'template_7a24m5b',
                 {
                     firstName: formData.firstName,
                     lastName: formData.lastName,
@@ -63,7 +63,7 @@ export default function Contact() {
                     mobileNo: formData.mobileNo,
                     message: formData.message,
                 },
-                'LTG69Xag641VstQkW'      //  Public Key
+                'LTG69Xag641VstQkW'
             )
                 .then(() => {
 
@@ -186,7 +186,7 @@ export default function Contact() {
                             )}
                             <TextField
                                 variant="standard"
-                                placeholder="Mobile No"
+                                placeholder="Mobile No(Optional)"
                                 type="tel"
                                 fullWidth
                                 name="mobileNo"
@@ -200,11 +200,7 @@ export default function Contact() {
                                 }}
                                 sx={inputSx}
                             />
-                            {errors.mobileNo && (
-                                <p style={{ color: "#eb4242", padding: 0, margin: 0 }} className='text-sm'>
-                                    {errors.mobileNo}
-                                </p>
-                            )}
+
                         </Box>
 
                         {/* RIGTH TEXTAREA*/}

@@ -7,8 +7,32 @@ import StickyNotes from "/src/assets/stickyNotes.png"
 import WeatherImg from "/src/assets/WeatherApp.png"
 import FoodFundayImg from "/src/assets/FoodFundayApp.png"
 import CalculatorImg from "/src/assets/Calculator.png"
-
+import AshionImg from "/src/assets/ashionApp.png"
+import MophyDashboardImg from "/src/assets/MophyDashboardImg.png"
+import BookStoreImg from "/src/assets/bookStoreApp.png"
+import TodoImg from "/src/assets/todoApp.png"
 const projectsData = [
+    {
+        title: "ASHION E-COMMERCE STORE",
+        description: "A comprehensive e-commerce web application designed to deliver a complete online shopping experience. It features advanced multi-category product filtering, dynamic shopping cart management, wishlist tracking, checkout summaries, and persistent local storage synchronization.",
+        techStack: ["React.js", "JavaScript (ES6+)", "CSS3", "Local Storage"],
+        image: AshionImg,
+        link: "https://ayesha-ashion-ecommerce-store.vercel.app/"
+    },
+    {
+        title: "MOPHY PAYMENT ADMIN DASHBOARD",
+        description: "A modern fintech payment admin dashboard that allows users to monitor financial metrics, manage transactions using advanced data tables, analyze performance trends through interactive charts, and customize their viewing experience with a smooth dark/light theme toggle.",
+        techStack: ["React.js", "Vite", "Tailwind CSS", "Material UI", "JavaScript (ES6+)"],
+        image: MophyDashboardImg,
+        link: "https://mophy-payment-admin-dashboard.vercel.app/"
+    },
+    {
+        title: "BOOK STORE E-COMMERCE",
+        description: "An advanced online bookstore web application featuring reusable components, public/private routing, and Axios-powered API data fetching. It enables users to seamlessly search and filter books, view detailed information, manage a shopping cart, and complete a secure checkout process.",
+        techStack: ["React.js", "React Router", "Vite", "Tailwind CSS", "Axios", "REST API", "JavaScript (ES6+)"],
+        image: BookStoreImg,
+        link: "https://ayesha-book-finder-store.vercel.app/"
+    },
     {
         title: "FOOD FUNDAY RECIPE BOOK",
         description: "An interactive recipe exploration app where users can search for a wide variety of dishes, instantly view detailed ingredients and cooking steps, and discover new culinary ideas through a seamless API-powered experience.",
@@ -22,6 +46,12 @@ const projectsData = [
         techStack: ["HTML5", "CSS3", "JavaScript", "REST API", "Async/Await"],
         image: WeatherImg,
         link: "https://ayesha-weather-forecast.vercel.app"
+    }, {
+        title: "TODO APP - MANAGE YOUR DAILY TASKS",
+        description: "A feature-rich task management web application built with React, offering full CRUD operations (Create, Read, Update, Delete) to seamlessly organize daily goals and routines. It features interactive state handling and a personalized user greeting interface.",
+        techStack: ["React.js", "CSS3", "JavaScript (ES6+)", "React State"],
+        image: TodoImg,
+        link: "https://ayesha-todo-app.vercel.app/todo"
     },
     {
         title: "STICKY NOTES WEB APP",
