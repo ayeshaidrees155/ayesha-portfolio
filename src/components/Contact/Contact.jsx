@@ -1,8 +1,7 @@
 import emailjs from '@emailjs/browser';
 import React, { useState } from 'react'
-import { Box, Typography, TextField, Checkbox, FormControlLabel, Button, Snackbar, Alert } from '@mui/material'
+import { Box, Typography, TextField, Button, Snackbar, Alert } from '@mui/material'
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward'
-
 
 export default function Contact() {
     const [formData, setFormData] = useState({
@@ -11,7 +10,6 @@ export default function Contact() {
         email: "",
         mobileNo: "",
         message: "",
-
     })
     const [errors, setErrors] = useState({})
     const [openSnackbar, setOpenSnackbar] = useState(false);
@@ -21,38 +19,32 @@ export default function Contact() {
         let newValue = value;
         if (name === "mobileNo") { newValue = value.replace(/\D/g, ""); }
 
-
         setFormData({ ...formData, [name]: newValue });
 
         if (errors[name]) {
             setErrors({ ...errors, [name]: "" });
         }
-
     })
 
-    const validateForm = ((e) => {
+    const validateForm = (() => {
         const newErrors = {}
         const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
-        if (!formData.firstName.trim()) { newErrors.firstName = "   First Name is required" }
-        if (!formData.lastName.trim()) { newErrors.lastName = "Last Name  is required" }
+        if (!formData.firstName.trim()) { newErrors.firstName = "First Name is required" }
+        if (!formData.lastName.trim()) { newErrors.lastName = "Last Name is required" }
         if (!formData.email.trim()) { newErrors.email = "Email Address is required" }
         else if (!emailPattern.test(formData.email)) { newErrors.email = "Please enter valid email address" }
-        // if (!formData.mobileNo.trim()) { newErrors.mobileNo = "Mobile No is required" }
         if (!formData.message.trim()) { newErrors.message = "Message cannot be empty" }
 
         setErrors(newErrors);
         return Object.keys(newErrors).length === 0;
     })
 
-
-
     const handleSubmit = (e) => {
         e.preventDefault();
 
         const isValid = validateForm();
         if (isValid) {
-
             emailjs.send(
                 'service_lg0i94j',
                 'template_7a24m5b',
@@ -66,7 +58,6 @@ export default function Contact() {
                 'LTG69Xag641VstQkW'
             )
                 .then(() => {
-
                     setOpenSnackbar(true);
                     setFormData({ firstName: "", lastName: "", email: "", mobileNo: "", message: "" });
                 })
@@ -75,10 +66,12 @@ export default function Contact() {
                 });
         }
     };
+
     const inputSx = {
         '& .MuiInput-root': {
             color: 'white',
-            fontSize: { xs: '0.9rem', md: '1rem' },
+
+            fontSize: { xs: '1rem', md: '1rem' },
             paddingY: '6px',
             '&:before': { borderBottomColor: 'rgba(255, 255, 255, 0.4)' },
             '&:hover:not(.Mui-disabled):before': { borderBottomColor: 'white' },
@@ -88,7 +81,6 @@ export default function Contact() {
             color: 'rgba(255, 255, 255, 0.85)',
             opacity: 1,
         },
-
         '& input:-webkit-autofill': {
             WebkitBoxShadow: '0 0 0 1000px transparent inset !important',
             WebkitTextFillColor: '#ffffff !important',
@@ -103,9 +95,8 @@ export default function Contact() {
     return (
         <section
             id="contacts"
-            className="relative w-full min-h-screen bg-[#121113] overflow-hidden flex flex-col justify-end pt-12 md:pt-20 overflow-hidden"
+            className="relative w-full min-h-screen bg-[#121113] flex flex-col justify-end pt-12 md:pt-20 overflow-hidden"
         >
-
             <Typography
                 className="absolute top-8 md:top-14 left-1/2 -translate-x-1/2 !text-[14vw] sm:!text-[18vw] md:!text-[15vw] !font-black !uppercase tracking-widest pointer-events-none select-none whitespace-nowrap z-0"
                 sx={{
@@ -119,23 +110,21 @@ export default function Contact() {
 
             {/* FORM CARD */}
             <Box
-                className="relative z-10 w-full md:w-[78%] lg:w-[70%] md:ml-auto mt-12 sm:mt-20 md:mt-28 bg-[var(--bg-clr)] text-white rounded-none  px-6 py-10 sm:px-10 sm:py-12 md:p-14 lg:p-16 shadow-2xl"
+                className="relative z-10 w-full md:w-[78%] lg:w-[70%] md:ml-auto mt-12 sm:mt-20 md:mt-28 bg-[var(--bg-clr)] text-white rounded-none px-6 py-10 sm:px-10 sm:py-12 md:p-14 lg:p-16 shadow-2xl"
             >
                 <Typography className="!text-xs !font-semibold !tracking-[0.3em] !uppercase !mb-8 md:!mb-12 !text-white/80">
                     REACH US
                 </Typography>
 
                 <form className="flex flex-col gap-10 md:gap-14 w-full" onSubmit={handleSubmit}>
-                    {/* Grid Layout matching exact desktop baseline alignment */}
                     <Box className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-14 lg:gap-20 items-stretch">
 
-                        {/* Left Column: 4 Input Fields */}
+                        {/* Left Column */}
                         <Box className="flex flex-col justify-between gap-6 md:gap-8">
                             <TextField
                                 variant="standard"
                                 placeholder="First Name"
                                 fullWidth
-
                                 name="firstName"
                                 value={formData.firstName}
                                 onChange={handleChange}
@@ -145,16 +134,15 @@ export default function Contact() {
                                 }}
                             />
                             {errors.firstName && (
-                                <p style={{ color: "#eb4242", padding: 0, margin: 0 }}
-                                    className='text-sm'>
+                                <p style={{ color: "#eb4242", padding: 0, margin: 0 }} className='text-sm'>
                                     {errors.firstName}
                                 </p>
                             )}
+
                             <TextField
                                 variant="standard"
                                 placeholder="Last Name"
                                 fullWidth
-
                                 name="lastName"
                                 value={formData.lastName}
                                 onChange={handleChange}
@@ -168,6 +156,7 @@ export default function Contact() {
                                     {errors.lastName}
                                 </p>
                             )}
+
                             <TextField
                                 variant="standard"
                                 placeholder="Email"
@@ -177,16 +166,16 @@ export default function Contact() {
                                 name="email"
                                 value={formData.email}
                                 onChange={handleChange}
-
                             />
                             {errors.email && (
                                 <p style={{ color: "#eb4242", padding: 0, margin: 0 }} className='text-sm'>
                                     {errors.email}
                                 </p>
                             )}
+
                             <TextField
                                 variant="standard"
-                                placeholder="Mobile No(Optional)"
+                                placeholder="Mobile No (Optional)"
                                 type="tel"
                                 fullWidth
                                 name="mobileNo"
@@ -200,18 +189,17 @@ export default function Contact() {
                                 }}
                                 sx={inputSx}
                             />
-
                         </Box>
 
-                        {/* RIGTH TEXTAREA*/}
+                        {/* RIGHT TEXTAREA */}
                         <Box className="flex flex-col justify-between h-full min-h-[180px] md:min-h-0">
                             <textarea
                                 name="message"
                                 value={formData.message}
                                 onChange={handleChange}
                                 placeholder="Type your message here"
-                                className="w-full h-full min-h-[160px] md:min-h-full bg-transparent border-b border-white/40 focus:border-white text-white text-[0.9rem] md:text-[1rem] py-1.5 focus:outline-none transition-colors resize-none placeholder-white/85 rounded-none [webkit-text-fill-color:white] [transition:background-color_5000s_ease-in-out_0s] capitalize"
 
+                                className="w-full h-full min-h-[160px] md:min-h-full bg-transparent border-b border-white/40 focus:border-white text-white text-[1rem] md:text-[1rem] py-1.5 focus:outline-none transition-colors resize-none placeholder-white/85 rounded-none [webkit-text-fill-color:white] [transition:background-color_5000s_ease-in-out_0s] capitalize"
                             />
                             {errors.message && (
                                 <p style={{ color: "#eb4242", padding: 0, margin: 0 }} className='text-sm'>
@@ -221,10 +209,7 @@ export default function Contact() {
                         </Box>
                     </Box>
 
-
                     <Box className="flex justify-end">
-
-
                         <Button
                             type="submit"
                             variant="outlined"
@@ -265,7 +250,7 @@ export default function Contact() {
                     variant="filled"
                     sx={{
                         backgroundColor: '#121113',
-                        color: '#white',
+                        color: 'white',
                         borderRadius: '12px',
                         fontWeight: 500,
                         boxShadow: '0 10px 30px rgba(0,0,0,0.3)'
