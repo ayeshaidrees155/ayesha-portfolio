@@ -36,7 +36,7 @@ export default function About() {
                     <Box className="w-7 h-5 bg-[var(--bg-nav)] rounded-md -z-10"></Box>
 
 
-                    <Box className="flex flex-col items-center transition-transform duration-300 transform -rotate-5 hover:rotate-0 cursor-pointer" >
+                    <Box className="flex flex-col items-center transition-transform duration-300 transform -rotate-5 hover:rotate-0 active:rotate-0 cursor-pointer" >
 
 
                         <Box className="w-20 h-6 bg-[var(--clr-blackSec)] rounded-xl -mt-2 z-10 flex items-center justify-center">
@@ -70,7 +70,7 @@ export default function About() {
                                     component="img"
                                     src={icon.url}
                                     alt={icon.name}
-                                    className="w-10 h-10  md:w-15 md:h-15 object-contain transform transition-transform duration-300 hover:scale-110 cursor-pointer"
+                                    className="w-10 h-10  md:w-15 md:h-15 object-contain transform transition-transform duration-300 hover:scale-110  active:scale-110 cursor-pointer"
                                 ></Box>
                             </Stack>
                         ))}

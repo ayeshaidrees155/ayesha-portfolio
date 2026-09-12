@@ -2,7 +2,6 @@ import React from 'react'
 import bgImg from "/src/assets/workBg2.png"
 import { Box, Typography } from "@mui/material"
 import Badge from '../Badge'
-import ProjectImg from "/src/assets/proj.jpg"
 import StickyNotes from "/src/assets/stickyNotes.png"
 import WeatherImg from "/src/assets/WeatherApp.png"
 import FoodFundayImg from "/src/assets/FoodFundayApp.png"
@@ -125,21 +124,21 @@ export default function Projects() {
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     data-aos={isEven ? "fade-right" : "fade-left"}
-                                    className="group w-full sm:w-[85%] md:w-[70%] lg:w-[50%] bg-white/85 backdrop-blur-md border border-[var(--bg-clr)]/30 hover:border-[var(--bg-clr)] transition-all duration-500 rounded-[24px] sm:rounded-[28px] p-4 sm:p-5 md:p-6 flex flex-col gap-4 shadow-md hover:shadow-[0_12px_30px_rgba(162,121,143,0.2)] cursor-pointer no-underline block"
+                                    className="group w-full sm:w-[85%] md:w-[70%] lg:w-[50%] bg-white/85 backdrop-blur-md border border-[var(--bg-clr)]/30 hover:border-[var(--bg-clr)] active:border-[var(--bg-clr)] transition-all duration-500 rounded-[24px] sm:rounded-[28px] p-4 sm:p-5 md:p-6 flex flex-col gap-4 shadow-md hover:shadow-[0_12px_30px_rgba(162,121,143,0.2)]  active:shadow-[0_12px_30px_rgba(162,121,143,0.2)] cursor-pointer no-underline block"
                                 >
                                     <Box className="w-full h-40 sm:h-52 md:h-56 rounded-[16px] sm:rounded-[18px] overflow-hidden border border-[var(--bg-clr)]/20 relative">
                                         <img
                                             src={project.image}
                                             alt={project.title}
-                                            className="w-full h-full object-top group-hover:scale-105 transition-transform duration-700 ease-out"
+                                            className="w-full h-full object-top group-hover:scale-105 group-active:scale-105 transition-transform duration-700 ease-out"
                                         />
                                     </Box>
 
                                     {/* Details */}
                                     <Box className="flex flex-col gap-2 px-1">
-                                        <Typography component="h3" className="!text-base sm:!text-xl md:!text-2xl !font-extrabold text-[var(--clr-blackSec)] tracking-wide group-hover:text-[var(--bg-clr)] transition-colors flex items-center justify-between">
+                                        <Typography component="h3" className="!text-base sm:!text-xl md:!text-2xl !font-extrabold text-[var(--clr-blackSec)] tracking-wide group-hover:text-[var(--bg-clr)] group-active:text-[var(--bg-clr)] transition-colors flex items-center justify-between">
                                             {project.title}
-                                            <span className="text-sm opacity-0 group-hover:opacity-100 transition-opacity">↗</span>
+                                            <span className="text-sm opacity-0 group-hover:opacity-100 group-active:opacity-100 transition-opacity">↗</span>
                                         </Typography>
 
                                         <Typography className="text-[var(--text-blackSec)]/75 !text-xs sm:!text-sm leading-relaxed">

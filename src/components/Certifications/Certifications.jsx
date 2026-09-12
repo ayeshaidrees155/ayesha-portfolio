@@ -4,6 +4,7 @@ import Badge from '../Badge';
 import bgImg from "/src/assets/cer2.png";
 import RemoveRedEyeOutlinedIcon from '@mui/icons-material/RemoveRedEyeOutlined';
 import CertificateModal from './CertificateModal';
+import certificateImg from "/src/assets/cer2.png"
 
 export default function Certifications() {
     const [selectedCertificate, setSelectedCertificate] = useState(null);
@@ -15,7 +16,7 @@ export default function Certifications() {
             issuer: "CODE FUSION 2026",
             badgeLabel: "VERIFIED CERTIFICATE",
             description: "Comprehensive certification covering React.js, ES6+ JavaScript, Redux Toolkit, and modern CSS frameworks. Focused on building responsive, scalable SPAs with seamless API integration and dynamic UI logic.",
-            certificateImg: "/src/assets/cer2.png"
+            certificateImg: certificateImg
         }
     ];
 
@@ -86,7 +87,7 @@ export default function Certifications() {
                                 <button
                                     onClick={() => setSelectedCertificate(cer)}
                                     type="Button"
-                                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-[var(--border-fadeWhite)]/30 bg-[var(--bg-clr)]/10 text-[var(--bg-clr)] group-hover:bg-[var(--bg-clr)] group-hover:text-[var(--clr-white)] group-active:bg-[var(--bg-clr)] group-active:text-[var(--clr-white)] text-xs transition-all duration-300"
+                                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-[var(--border-fadeWhite)]/30 bg-[var(--bg-clr)]/10 text-[var(--bg-clr)] group-hover:bg-[var(--bg-clr)] group-active:bg-[var(--bg-clr)] group-hover:text-[var(--clr-white)] group-active:text-[var(--clr-white)] group-active:bg-[var(--bg-clr)] group-active:text-[var(--clr-white)] text-xs transition-all duration-300"
                                 >
                                     <span className="text-sm flex items-center">
                                         <RemoveRedEyeOutlinedIcon fontSize="small" />

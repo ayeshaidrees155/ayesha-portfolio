@@ -1,8 +1,6 @@
 import React from 'react'
 import { Box, Typography } from '@mui/material'
 import bgImg from "/src/assets/expertiseBg.jpg"
-
-// React Icons Imports
 import {
     SiReact,
     SiJavascript,
@@ -13,12 +11,9 @@ import {
     SiMui,
     SiBootstrap,
     SiHtml5,
-
-
     SiGit
 } from "react-icons/si"
 import { FaCss } from "react-icons/fa6";
-
 import { TbApi, TbDatabaseExport, TbRefresh } from "react-icons/tb"
 import Badge from '../Badge';
 
@@ -107,22 +102,22 @@ export default function Skills() {
                     {skillCategories.map((cat) => (
                         <Box
                             key={cat.id}
-                            className="group relative p-8 bg-[var(--bg-white)] hover:bg-[#1B181E] border border-[var(--border-fadeWhite)] rounded-3xl shadow-sm hover:shadow-2xl transition-all duration-500 flex flex-col justify-between hover:shadow-md  transform hover:scale-105 cursor-pointer"
+                            className="group relative p-8 bg-[var(--bg-white)] hover:bg-[#1B181E] active:bg-[#1B181E] border border-[var(--border-fadeWhite)] rounded-3xl shadow-sm hover:shadow-2xl active:shadow-2xl transition-all duration-500 flex flex-col justify-between hover:shadow-md active:shadow-md  transform hover:scale-105 active:scale-105 cursor-pointer"
                             data-aos="zoom-in" data-aos-duration="2000"                        >
                             <Box className="flex flex-col items-start w-full" >
 
 
                                 <Box className="w-full flex items-center justify-between mb-6">
-                                    <span className="text-[10px] font-bold tracking-wider px-3 py-1 rounded-md bg-[var(--bg-gray)] group-hover:bg-[#2A242D] text-[var(--clr-gray)] group-hover:text-[#A2798F] border border-[var(--border-fadeWhite)] transition-colors duration-500">
+                                    <span className="text-[10px] font-bold tracking-wider px-3 py-1 rounded-md bg-[var(--bg-gray)] group-hover:bg-[#2A242D] group-active:bg-[#2A242D] text-[var(--clr-gray)] group-hover:text-[#A2798F] group-active:text-[#A2798F] border border-[var(--border-fadeWhite)] transition-colors duration-500">
                                         {cat.category}
                                     </span>
-                                    <span className="text-xs font-serif font-bold text-[var(--border-fadeGray)] group-hover:text-white transition-colors duration-500">
+                                    <span className="text-xs font-serif font-bold text-[var(--border-fadeGray)] group-hover:text-white group-active:text-white transition-colors duration-500">
                                         {/* {cat.id} */}
                                     </span>
                                 </Box>
 
 
-                                <Typography className="!text-2xl !font-bold text-[var(--clr-blackSec)] group-hover:!text-white mb-6 transition-colors duration-500">
+                                <Typography className="!text-2xl !font-bold text-[var(--clr-blackSec)] group-hover:!text-white  group-active:!text-white mb-6 transition-colors duration-500">
                                     {cat.title}
                                 </Typography>
 
@@ -131,7 +126,7 @@ export default function Skills() {
                                     {cat.skills.map((skill, i) => (
                                         <span
                                             key={i}
-                                            className="flex items-center gap-2 text-xs font-semibold px-3 py-2 rounded-xl bg-[var(--bg-gray)] group-hover:bg-[#2A242D] text-[var(--clr-blackSec)] group-hover:text-white border border-[var(--border-fadeWhite)] transition-colors duration-500"
+                                            className="flex items-center gap-2 text-xs font-semibold px-3 py-2 rounded-xl bg-[var(--bg-gray)] group-hover:bg-[#2A242D] group-active:bg-[#2A242D] text-[var(--clr-blackSec)] group-hover:text-white group-active:text-white  border border-[var(--border-fadeWhite)] transition-colors duration-500"
                                         >
                                             <span className="text-sm">{skill.icon}</span>
                                             {skill.name}

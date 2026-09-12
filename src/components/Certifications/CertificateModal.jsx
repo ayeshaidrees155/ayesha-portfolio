@@ -15,7 +15,7 @@ export default function CertificateModal({ open, onClose, certificate }) {
 
                 <IconButton
                     onClick={onClose}
-                    className="!absolute top-6 right-6 !bg-gray-100 hover:!bg-gray-200 !text-gray-600"
+                    className="!absolute top-6 right-6 !bg-gray-100 hover:!bg-gray-200  active:!bg-gray-200 !text-gray-600"
                 >
                     <CloseIcon />
                 </IconButton>
