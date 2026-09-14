@@ -4,7 +4,6 @@ import Button from '../Buttons/Button';
 import DescriptionIcon from '@mui/icons-material/Description';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 import resumePdf from "/src/assets/AyeshaIdrees-resume.pdf";
 import HeroPersonImg from "/src/assets/portfolio.png";
