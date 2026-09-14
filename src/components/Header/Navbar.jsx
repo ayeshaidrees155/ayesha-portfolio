@@ -4,7 +4,6 @@ import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import Button from '../Buttons/Button';
 import resumePdf from "/src/assets/AyeshaIdrees-resume.pdf"
-
 export default function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);

@@ -5,7 +5,7 @@ import DescriptionIcon from '@mui/icons-material/Description';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
-import resumePdf from "/src/assets/AyeshaIdrees-resume.pdf";
+import resumePdf from "/src/assets/AyeshaIdrees-resume.pdf"
 import HeroPersonImg from "/src/assets/portfolio.png";
 
 export default function Home() {
