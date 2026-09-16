@@ -10,6 +10,7 @@ import AshionImg from "/src/assets/ashionApp.webp"
 import MophyDashboardImg from "/src/assets/MophyDashboardImg.webp"
 import BookStoreImg from "/src/assets/bookStoreApp.webp"
 import TodoImg from "/src/assets/todoApp.webp"
+
 const projectsData = [
     {
         title: "ASHION E-COMMERCE STORE",

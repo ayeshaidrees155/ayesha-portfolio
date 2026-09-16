@@ -10,6 +10,7 @@ import muiIcon from "/src/assets/muiIcon.png";
 
 
 
+
 export default function About() {
     const techIcons = [
         { name: "React.js", url: reactIcon },
