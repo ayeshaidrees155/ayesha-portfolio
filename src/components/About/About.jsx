@@ -1,5 +1,5 @@
 import React from 'react'
-import bgImg from "/src/assets/aboutBg .png";
+import bgImg from "/src/assets/aboutBg .webp"
 import aboutImg from "/src/assets/aboutPic.webp"
 import { Box, Typography, Stack } from "@mui/material"
 import reactIcon from "/src/assets/react.svg";

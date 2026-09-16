@@ -1,5 +1,5 @@
 import React from 'react'
-import bgImg from "/src/assets/workBg2.png"
+import bgImg from "/src/assets/workBg2.webp"
 import { Box, Typography } from "@mui/material"
 import Badge from '../Badge'
 import StickyNotes from "/src/assets/stickyNotes.webp"

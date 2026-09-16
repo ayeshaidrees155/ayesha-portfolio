@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { Box, Typography } from "@mui/material";
 import Badge from '../Badge';
-import bgImg from "/src/assets/cer2.png";
+import bgImg from "/src/assets/cer2.webp"
 import RemoveRedEyeOutlinedIcon from '@mui/icons-material/RemoveRedEyeOutlined';
 import CertificateModal from './CertificateModal';
-import certificateImg from "/src/assets/cer2.png"
+import certificateImg from "/src/assets/cer2.webp"
 
 export default function Certifications() {
     const [selectedCertificate, setSelectedCertificate] = useState(null);
