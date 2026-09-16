@@ -200,6 +200,12 @@ export default function Contact() {
                                 placeholder="Type your message here"
 
                                 className="w-full h-full min-h-[160px] md:min-h-full bg-transparent border-b border-white/40 focus:border-white text-white text-[1rem] md:text-[1rem] py-1.5 focus:outline-none transition-colors resize-none placeholder-white/85 rounded-none [webkit-text-fill-color:white] [transition:background-color_5000s_ease-in-out_0s] capitalize"
+                                style={{
+                                    color: 'white',
+                                    borderBottom: '1px solid rgba(255, 255, 255, 0.4)',
+                                }}
+                                onFocus={(e) => e.target.style.borderBottomColor = 'white'}
+                                onBlur={(e) => e.target.style.borderBottomColor = 'rgba(255, 255, 255, 0.4)'}
                             />
                             {errors.message && (
                                 <p style={{ color: "#eb4242", padding: 0, margin: 0 }} className='text-sm'>
