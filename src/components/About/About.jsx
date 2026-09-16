@@ -1,6 +1,6 @@
 import React from 'react'
 import bgImg from "/src/assets/aboutBg .png";
-import aboutPic from "/src/assets/aboutPic.png"
+import aboutImg from "/src/assets/aboutPic.webp"
 import { Box, Typography, Stack } from "@mui/material"
 import reactIcon from "/src/assets/react.svg";
 import jsIcon from "/src/assets/jsIcon.png";
@@ -46,7 +46,7 @@ export default function About() {
 
                         <Box className="-mt-3 p-3 bg-[var(--clr-blackSec)] rounded-xl shadow-2xl max-w-[340px] w-[270px] bg-[var(--bg-clr)]" >
                             <img
-                                src={aboutPic}
+                                src={aboutImg}
                                 alt="Profile"
                                 className="border-2 border-[var(--clr-gray)] !w-[full] h-[320px] object-cover rounded-xl"
                             />

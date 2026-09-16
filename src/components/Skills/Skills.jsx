@@ -25,12 +25,12 @@ export default function Skills() {
             category: "FRONTEND & FRAMEWORKS",
             title: "Core Web Architecture",
             skills: [
-                { name: "React.js", icon: <SiReact className="text-[#61DAFB]" /> },
-                { name: "JavaScript (ES6+)", icon: <SiJavascript className="text-[#F7DF1E]" /> },
-                { name: "Vite", icon: <SiVite className="text-[#646CFF]" /> },
-                { name: "React Router", icon: <SiReactrouter className="text-[#CA4245]" /> },
-                { name: "Redux Toolkit", icon: <SiRedux className="text-[#764ABC]" /> },
-                { name: "JSX & DOM Logic", icon: <SiReact className="text-[#61DAFB]" /> }
+                { name: "React.js", icon: <SiReact aria-hidden="true" className="text-[#61DAFB]" /> },
+                { name: "JavaScript (ES6+)", icon: <SiJavascript aria-hidden="true" className="text-[#F7DF1E]" /> },
+                { name: "Vite", icon: <SiVite aria-hidden="true" className="text-[#646CFF]" /> },
+                { name: "React Router", icon: <SiReactrouter aria-hidden="true" className="text-[#CA4245]" /> },
+                { name: "Redux Toolkit", icon: <SiRedux aria-hidden="true" className="text-[#764ABC]" /> },
+                { name: "JSX & DOM Logic", icon: <SiReact aria-hidden="true" className="text-[#61DAFB]" /> }
             ]
         },
         {
@@ -38,11 +38,11 @@ export default function Skills() {
             category: "STYLING & DESIGN SYSTEMS",
             title: "UI Engineering & Styling",
             skills: [
-                { name: "Tailwind CSS v4", icon: <SiTailwindcss className="text-[#06B6D4]" /> },
-                { name: "Material UI (MUI)", icon: <SiMui className="text-[#007FFF]" /> },
-                { name: "Bootstrap", icon: <SiBootstrap className="text-[#7952B3]" /> },
-                { name: "HTML5 / CSS3", icon: <SiHtml5 className="text-[#E34F26]" /> },
-                { name: "Responsive Layouts", icon: <FaCss className="text-[#1572B6]" /> },
+                { name: "Tailwind CSS v4", icon: <SiTailwindcss aria-hidden="true" className="text-[#06B6D4]" /> },
+                { name: "Material UI (MUI)", icon: <SiMui aria-hidden="true" className="text-[#007FFF]" /> },
+                { name: "Bootstrap", icon: <SiBootstrap aria-hidden="true" className="text-[#7952B3]" /> },
+                { name: "HTML5 / CSS3", icon: <SiHtml5 aria-hidden="true" className="text-[#E34F26]" /> },
+                { name: "Responsive Layouts", icon: <FaCss aria-hidden="true" className="text-[#1572B6]" /> },
 
             ]
         },
@@ -51,12 +51,12 @@ export default function Skills() {
             category: "LOGIC & STATE MANAGEMENT",
             title: "APIs & Client Workflow",
             skills: [
-                { name: "RESTful APIs", icon: <TbApi className="text-[#A2798F]" /> },
-                { name: "Async Fetching", icon: <TbRefresh className="text-[#A2798F]" /> },
-                { name: "Context API", icon: <SiReact className="text-[#61DAFB]" /> },
-                { name: "LocalStorage", icon: <TbDatabaseExport className="text-[#A2798F]" /> },
-                { name: "Git & GitHub", icon: <SiGit className="text-[#F05032]" /> },
-                { name: "SPAs Logic", icon: <SiReactrouter className="text-[#CA4245]" /> }
+                { name: "RESTful APIs", icon: <TbApi aria-hidden="true" className="text-[#A2798F]" /> },
+                { name: "Async Fetching", icon: <TbRefresh aria-hidden="true" className="text-[#A2798F]" /> },
+                { name: "Context API", icon: <SiReact aria-hidden="true" className="text-[#61DAFB]" /> },
+                { name: "LocalStorage", icon: <TbDatabaseExport aria-hidden="true" className="text-[#A2798F]" /> },
+                { name: "Git & GitHub", icon: <SiGit aria-hidden="true" className="text-[#F05032]" /> },
+                { name: "SPAs Logic", icon: <SiReactrouter aria-hidden="true" className="text-[#CA4245]" /> }
             ]
         }
     ];

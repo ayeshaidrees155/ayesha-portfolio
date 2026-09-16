@@ -6,7 +6,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 import resumePdf from "/src/assets/AyeshaIdrees-resume.pdf"
-import HeroPersonImg from "/src/assets/portfolio.png";
+import HeroPersonImg from "/src/assets/portfolio.webp";
 
 export default function Home() {
     return (
@@ -125,7 +125,7 @@ export default function Home() {
 
             {/* BOUNCE ARROW */}
             <Box className="absolute bottom-4 left-1/2 -translate-x-1/2 z-30 animate-bounce">
-                <a href="#about" className="text-white/70 hover:text-white text-xl animate-bounce">
+                <a href="#about" aria-label="Scroll to About section" className="text-white/70 hover:text-white text-xl animate-bounce">
                     <ArrowDownwardIcon />
                 </a>
             </Box>

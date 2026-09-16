@@ -147,7 +147,8 @@ export default function Navbar() {
                     <IconButton onClick={toggleMenu}
 
                     >
-                        <CloseIcon fontSize="large" sx={{ color: isMenuOpen ? "white" : "black" }} />
+                        <CloseIcon fontSize="large" aria-label="Close menu"
+                            sx={{ color: isMenuOpen ? "white" : "black" }} />
                     </IconButton>
                 </Box>
 
